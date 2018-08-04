@@ -1,0 +1,55 @@
+<md-content>
+    <md-content layout-padding>
+        <div layout="row" layout-align="space-between center" flex style="width: 350px;">
+            <form name="signUpForm" ng-submit="validateLogin()">
+                <div class="layout-column" layout="column">
+                    <md-input-container class="md-block">
+                        <label>
+                            Name
+                        </label>
+                        <input name="name" ng-model="userdetails.name" required="" type="text">
+                        </input>
+                        <div ng-messages="signUpForm.name.$error">
+                            <div ng-message="required">
+                                Name is required.
+                            </div>
+                        </div>
+                    </md-input-container>
+                    <md-input-container class="md-block">
+                        <label>
+                            Password
+                        </label>
+                        <input name="password" ng-model="userdetails.password" required="" type="password">
+                        </input>
+                        <div ng-messages="signUpForm.password.$error">
+                            <div ng-message="required">
+                                Password is required.
+                            </div>
+                        </div>
+                    </md-input-container>
+                    <md-radio-group layout="row" ng-model="userdetails.type">
+                        <div flex="" layout="row" layout-align="start center">
+                            <div flex="">
+                                User Type
+                            </div>
+                            <md-radio-button aria-label="" value="lender" style="margin-left:25px;">
+                                Lender
+                            </md-radio-button>
+                            <md-radio-button aria-label="" value="lendee">
+                                Lendee
+                            </md-radio-button>
+                        </div>
+                    </md-radio-group>
+                </div>
+                <section layout="row" layout-align="center center" layout-sm="column" layout-wrap="">
+                    <md-button class="md-primary captalize" ng-click="hideLogin()">
+                        Cancel
+                    </md-button>
+                    <md-button class="md-accent md-default" type="submit">
+                        Login
+                    </md-button>
+                </section>
+            </form>
+        </div>
+    </md-content>
+</md-content>

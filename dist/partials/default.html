@@ -1,0 +1,39 @@
+<md-toolbar class="md-hue-2">
+    <div class="md-toolbar-tools">
+        <h2 flex md-truncate>Microchain</h2>
+        <md-button md-no-ink class="md-primary md-raised" ng-if="enableLogin" ng-click="showSignUp()">
+            SignUp
+        </md-button>
+        <md-button md-no-ink class="md-primary md-raised" ng-if="enableLogin" ng-click="showLogin($event)">
+            Login
+        </md-button>
+        <md-button md-no-ink class="md-warning md-raised" ng-click="logout()" ng-if="!enableLogin">
+            Logout
+        </md-button>
+        <md-button class="md-icon-button" aria-label="More">
+            <md-icon>
+                <i class="fa fa-address-card" aria-hidden="true"></i>
+            </md-icon>
+        </md-button>
+    </div>
+</md-toolbar>
+<div class="row" ng-if="showdefault">
+    <div class="card">
+        <a href="#">
+            <img class="card-img-top" src="http://blockchain.infinitigroup.eu/wp-content/uploads/2017/07/background-2462431_1920.jpg"
+                style="width: 99%; height: 60vh;opacity: 0.9;" alt="">
+        </a>
+        <div class="card-body container">
+            <h4 class="card-title">
+                <a href="#">Microchain - Decentralized platform for micro funding.</a>
+            </h4>
+            <p class="card-text">
+                Bridging the gap between lender and lendee.
+            </p>
+        </div>
+    </div>
+</div>
+<md-content style="height: 100%;">
+    <div ui-view="content">
+    </div>
+</md-content>
