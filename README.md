@@ -1,6 +1,6 @@
 # Microchain
 
-`
+```
 gulp serve
 
 $ npm install solc ganache-cli web3@0.20.0
@@ -23,3 +23,4 @@ deployedContract.address
 contractInstance = microblock.at(deployedContract.address)
 contractInstance.createAccount.call('naveen', 1, '0x8130e96b4e7da31e10c050e9e20a184a1adcd85d')
 contractInstance.getLender.call('naveen')
+```
